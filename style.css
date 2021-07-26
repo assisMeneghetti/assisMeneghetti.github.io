@@ -1,0 +1,18 @@
+h1 {
+    font-family: serif;
+}
+h2 {
+    font-family: sans-serif;
+}
+body {
+    background-color: pink;
+}
+.soft-skills {
+    font-size: 40px;
+}
+.hard-skills {
+    font-size: 30px;
+}
+.idioms {
+    font-size: 20px;
+}
