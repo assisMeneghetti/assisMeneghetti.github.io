@@ -1,18 +1,47 @@
-h1 {
+body {
+    padding: 3%;
+}
+
+1 {
     font-family: serif;
 }
+
 h2 {
     font-family: sans-serif;
+    position: relative;
+    font-size: 20px;
+    left: 20px;
+    right: 10px;
 }
+
 body {
     background-color: pink;
 }
+
 .soft-skills {
     font-size: 40px;
 }
+
 .hard-skills {
     font-size: 30px;
 }
+
 .idioms {
     font-size: 20px;
+}
+
+.my-name {
+    text-align: center;
+}
+
+.my-image {
+    float: left;
+    padding: 20px;
+    background-color: greenyellow;
+}
+
+.image-conteiner {
+    height: 300px;
+    position: relative;
+    padding-right: 16px;
 }
