@@ -1,0 +1,26 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://ogimg.infoglobo.com.br/in/15467669-e96-d9b/FT1086A/xadventure-time-screensaver-hd-widescreen-3-1080p.jpg.pagespeed.ic.tjqRD3xfXx.jpg);
+  height: 100vh;
+  background-size: cover;
+ background-blend-mode: lighten;
+}
+
+.pixel {
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: table-cell;
+  box-sizing: border-box;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+}
+
