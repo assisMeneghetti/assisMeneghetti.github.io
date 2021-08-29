@@ -28,6 +28,7 @@ color2.style.backgroundColor = generateColor();
 color3.style.backgroundColor = generateColor();
 color4.style.backgroundColor = generateColor();
 
+// gerando cor aleatoria
 btnColor.addEventListener('click', () => {
   color2.style.backgroundColor = generateColor();
   color3.style.backgroundColor = generateColor();
