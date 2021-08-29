@@ -19,7 +19,7 @@ function generateColor() {
   if (r !== 255) {
     return `rgb(${r}, ${g}, ${b})`;
   }
-} j
+}
 
 generateColor();
 
