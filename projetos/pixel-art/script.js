@@ -9,6 +9,7 @@ const color4 = document.querySelector('.color4');
 const colorPalette = document.getElementsByClassName('color');
 const previousColor = document.getElementsByClassName('selected');
 const cleanButtom = document.getElementById('clear-board');
+const btnColor = document.getElementById('change-color');
 
 /** Sourse: https://wallacemaxters.com.br/blog/2021/02/20/como-gerar-cores-aleatorias-no-javascript */
 function generateColor() {
@@ -18,7 +19,7 @@ function generateColor() {
   if (r !== 255) {
     return `rgb(${r}, ${g}, ${b})`;
   }
-}
+} j
 
 generateColor();
 
@@ -26,6 +27,12 @@ color1.style.backgroundColor = 'rgb(0, 0, 0)';
 color2.style.backgroundColor = generateColor();
 color3.style.backgroundColor = generateColor();
 color4.style.backgroundColor = generateColor();
+
+btnColor.addEventListener('click', () => {
+  color2.style.backgroundColor = generateColor();
+  color3.style.backgroundColor = generateColor();
+  color4.style.backgroundColor = generateColor();
+})
 
 function colorSelect() {
   for (let index = 0; index < colorPalette.length; index += 1) {
@@ -68,11 +75,14 @@ function deleteBoard() {
   pixelBoard.innerHTML = '';
 }
 
+const pixels = document.getElementsByClassName('pixel');
+
 buttonVQV.addEventListener('click', () => {
   boardSize = parseInt(input.value, 10);
   verifyInputs();
   deleteBoard();
   createBoard();
+  erasePixel();
 });
 
 function paintPixels(event) {
@@ -84,10 +94,18 @@ function paintPixels(event) {
 pixelBoard.addEventListener('click', paintPixels);
 
 function cleanGrid() {
-  const pixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
 
 cleanButtom.addEventListener('click', cleanGrid);
+
+function erasePixel() {
+  for (let index = 0; index < pixels.length; index++) {
+    pixels[index].addEventListener('dblclick', function (event) {
+      const evento = event.target;
+      evento.style.backgroundColor = 'rgb(255, 255, 255)';
+    });
+  }
+}
